@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+        
+        <struts>
+        
+        <package name="struts2" extends="struts-default">
+        
+        <action name="infomationList" class="com.hulin.action.InfomationAction" method="InfomationList">
+        	
+        		<result name="success" > /WEB-INF/page/main.jsp</result>
+        		
+        	</action>
+        	<action name="userRegister" class="com.hulin.action.userAction" method="saveUser">
+        	
+        		<result name="success">/WEB-INF/page/result.jsp</result>
+        	</action>
+        	
+        	<action name="loginCheck" class="com.hulin.action.userAction" method="CheckUser">
+        	
+        			<result name="success">index.jsp</result>
+        	</action>
+        	
+        	<action name="updateUser" class="com.hulin.action.userAction" method="getSinglePersonById">
+        	
+        			<result name="success">/WEB-INF/page/updateUser.jsp</result>
+        	</action>
+        
+        	<action name="updatePerson" class="com.hulin.action.userAction" method="updateUser">
+        	
+        			
+        			<result name="success">/WEB-INF/page/results.jsp</result>
+        			
+        	</action>
+        	<action name="gotoAddMessage" class="com.hulin.action.InfomationAction" method="gotoAddMessage">
+        	
+        		<result name="success">/WEB-INF/page/addMessage.jsp</result>
+        		
+        	</action>
+        	<action name="addInfomation" class="com.hulin.action.InfomationAction" method="addInfomation">
+        	
+        			<result name="success">/WEB-INF/page/infomation_table_audit.jsp</result>
+        	
+        	</action>
+        	<action name="addinfo" class="com.hulin.action.InfoListAuditAction" method="addInfo">
+        			<result name="success">/WEB-INF/page/addMessage.jsp</result>
+        		
+        	</action>
+        	
+        	<action name="CheckAdmin" class="com.hulin.action.AdminAction" method="CheckAdmin">
+        		<result name="success">/WEB-INF/page/Administration.jsp</result>
+        		<result name="input">index.jsp</result>
+        	</action>
+        	
+        	<action name="gotoAdminLogin" class="com.hulin.action.AdminAction" method="gotoAdminLogin">
+        		<result name="success">/WEB-INF/page/AdminLogin.jsp</result>
+        	</action>
+        	<action name="gotoInfomation_table_audit" class="com.hulin.action.AdminAction" method="gotoInfomation_table_audit">
+        		<result name="success">	
+        		/WEB-INF/page/results.jsp
+        		</result>
+        	</action>
+        	
+        	<action name="Infomation_table_audit" class="com.hulin.action.InfoListAuditAction" method="InfoList">
+        	
+        	<result name="success">/WEB-INF/page/infomation_table_audit.jsp</result>
+        	</action>
+        	<action name="deleteInfo" class="com.hulin.action.InfoListAuditAction" method="RemoveInfo">
+        	
+        		<result name="success">/WEB-INF/page/infomation_table_audit.jsp</result>
+        	
+        	</action>
+        	
+        	<action name="gotoAdpass" class="com.hulin.action.InfoListAuditAction" method="gotoAdpass">
+        			
+        			<result name="success">/WEB-INF/page/Adpass.jsp</result>
+        	
+        	</action>
+        
+        </package>
+        
+        
+        </struts>
